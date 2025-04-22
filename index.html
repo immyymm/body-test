@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>两分钟测测你属于什么体质？</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; }
+        body { padding: 20px; max-width: 800px; margin: auto; background-color: #f9f9f9; font-family: "微软雅黑", sans-serif; line-height: 1.6; }
+        h1 { color: #2a6ebd; text-align: center; }
+        .question { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); margin-bottom: 15px; }
+        .options { margin-top: 8px; }
+        label { display: inline-block; margin: 5px 10px 5px 0; }
+        button { background-color: #2a6ebd; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #1d4f8d; }
+        .results { background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>两分钟测测你属于什么体质？</h1>
+    <form id="quizForm">
+<div class="question"><strong>第1题：</strong>你是否容易感到疲劳、体力不支？<br><div class="options"><label><input type="radio" name="q0" value="1" required> 从不</label><label><input type="radio" name="q0" value="2" required> 偶尔</label><label><input type="radio" name="q0" value="3" required> 有时</label><label><input type="radio" name="q0" value="4" required> 经常</label><label><input type="radio" name="q0" value="5" required> 总是</label></div><input type="hidden" name="q0_types" value="气虚质"></div><div class="question"><strong>第2题：</strong>你是否怕冷、手脚冰凉？<br><div class="options"><label><input type="radio" name="q1" value="1" required> 从不</label><label><input type="radio" name="q1" value="2" required> 偶尔</label><label><input type="radio" name="q1" value="3" required> 有时</label><label><input type="radio" name="q1" value="4" required> 经常</label><label><input type="radio" name="q1" value="5" required> 总是</label></div><input type="hidden" name="q1_types" value="阳虚质"></div><div class="question"><strong>第3题：</strong>你是否容易口干舌燥、失眠多梦？<br><div class="options"><label><input type="radio" name="q2" value="1" required> 从不</label><label><input type="radio" name="q2" value="2" required> 偶尔</label><label><input type="radio" name="q2" value="3" required> 有时</label><label><input type="radio" name="q2" value="4" required> 经常</label><label><input type="radio" name="q2" value="5" required> 总是</label></div><input type="hidden" name="q2_types" value="阴虚质"></div><div class="question"><strong>第4题：</strong>你是否舌苔厚腻、身体感觉沉重？<br><div class="options"><label><input type="radio" name="q3" value="1" required> 从不</label><label><input type="radio" name="q3" value="2" required> 偶尔</label><label><input type="radio" name="q3" value="3" required> 有时</label><label><input type="radio" name="q3" value="4" required> 经常</label><label><input type="radio" name="q3" value="5" required> 总是</label></div><input type="hidden" name="q3_types" value="痰湿质"></div><div class="question"><strong>第5题：</strong>你是否面部油腻、易长痘、口苦口干？<br><div class="options"><label><input type="radio" name="q4" value="1" required> 从不</label><label><input type="radio" name="q4" value="2" required> 偶尔</label><label><input type="radio" name="q4" value="3" required> 有时</label><label><input type="radio" name="q4" value="4" required> 经常</label><label><input type="radio" name="q4" value="5" required> 总是</label></div><input type="hidden" name="q4_types" value="湿热质"></div><div class="question"><strong>第6题：</strong>你是否情绪起伏大，容易焦虑或抑郁？<br><div class="options"><label><input type="radio" name="q5" value="1" required> 从不</label><label><input type="radio" name="q5" value="2" required> 偶尔</label><label><input type="radio" name="q5" value="3" required> 有时</label><label><input type="radio" name="q5" value="4" required> 经常</label><label><input type="radio" name="q5" value="5" required> 总是</label></div><input type="hidden" name="q5_types" value="气郁质"></div><div class="question"><strong>第7题：</strong>你是否容易出现瘀斑、皮肤色素沉着或刺痛感？<br><div class="options"><label><input type="radio" name="q6" value="1" required> 从不</label><label><input type="radio" name="q6" value="2" required> 偶尔</label><label><input type="radio" name="q6" value="3" required> 有时</label><label><input type="radio" name="q6" value="4" required> 经常</label><label><input type="radio" name="q6" value="5" required> 总是</label></div><input type="hidden" name="q6_types" value="血瘀质"></div><div class="question"><strong>第8题：</strong>你是否经常打喷嚏、鼻塞，或对花粉、海鲜等过敏？<br><div class="options"><label><input type="radio" name="q7" value="1" required> 从不</label><label><input type="radio" name="q7" value="2" required> 偶尔</label><label><input type="radio" name="q7" value="3" required> 有时</label><label><input type="radio" name="q7" value="4" required> 经常</label><label><input type="radio" name="q7" value="5" required> 总是</label></div><input type="hidden" name="q7_types" value="特禀质"></div><div class="question"><strong>第9题：</strong>你是否面色红润、精力充沛、食欲正常、睡眠良好？<br><div class="options"><label><input type="radio" name="q8" value="1" required> 从不</label><label><input type="radio" name="q8" value="2" required> 偶尔</label><label><input type="radio" name="q8" value="3" required> 有时</label><label><input type="radio" name="q8" value="4" required> 经常</label><label><input type="radio" name="q8" value="5" required> 总是</label></div><input type="hidden" name="q8_types" value="平和质"></div><div class="question"><strong>第10题：</strong>你是否容易出汗，尤其是在活动后出汗黏腻？<br><div class="options"><label><input type="radio" name="q9" value="1" required> 从不</label><label><input type="radio" name="q9" value="2" required> 偶尔</label><label><input type="radio" name="q9" value="3" required> 有时</label><label><input type="radio" name="q9" value="4" required> 经常</label><label><input type="radio" name="q9" value="5" required> 总是</label></div><input type="hidden" name="q9_types" value="气虚质,痰湿质"></div><div class="question"><strong>第11题：</strong>你是否经常感觉胸闷或叹气？<br><div class="options"><label><input type="radio" name="q10" value="1" required> 从不</label><label><input type="radio" name="q10" value="2" required> 偶尔</label><label><input type="radio" name="q10" value="3" required> 有时</label><label><input type="radio" name="q10" value="4" required> 经常</label><label><input type="radio" name="q10" value="5" required> 总是</label></div><input type="hidden" name="q10_types" value="气郁质"></div><div class="question"><strong>第12题：</strong>你是否经常腰膝酸软、性功能低下或夜尿频多？<br><div class="options"><label><input type="radio" name="q11" value="1" required> 从不</label><label><input type="radio" name="q11" value="2" required> 偶尔</label><label><input type="radio" name="q11" value="3" required> 有时</label><label><input type="radio" name="q11" value="4" required> 经常</label><label><input type="radio" name="q11" value="5" required> 总是</label></div><input type="hidden" name="q11_types" value="阳虚质,阴虚质"></div>
+    <button type="button" onclick="calculate()">提交问卷</button>
+    </form>
+    <div class="results" id="result"></div>
+
+    <div style="text-align:center; margin-top:30px;">
+        <button onclick="copyLink()">复制页面链接，分享给朋友</button>
+        <p id="copyNotice" style="color:green; display:none;">复制成功，快去分享给朋友吧！</p>
+    </div>
+
+    <script>
+        function calculate() {
+            const form = document.forms["quizForm"];
+            const scores = {
+                "气虚质": 0, "阳虚质": 0, "阴虚质": 0,
+                "痰湿质": 0, "湿热质": 0, "气郁质": 0,
+                "血瘀质": 0, "特禀质": 0, "平和质": 0
+            };
+
+            for (let i = 0; i < 12; i++) {
+                const value = parseInt(form["q" + i].value);
+                const types = form["q" + i + "_types"].value.split(",");
+                types.forEach(type => { scores[type] += value; });
+            }
+
+            let maxScore = 0;
+            let mainType = "";
+            let secondaryTypes = [];
+
+            for (let type in scores) {
+                if (scores[type] > maxScore) {
+                    maxScore = scores[type];
+                    mainType = type;
+                }
+            }
+
+            for (let type in scores) {
+                if (type !== mainType && scores[type] >= maxScore - 2) {
+                    secondaryTypes.push(type);
+                }
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `主要体质类型：<span style="color:darkred">${mainType}</span><br>`;
+            if (secondaryTypes.length > 0) {
+                resultDiv.innerHTML += `可能兼夹体质：<span style="color:darkgreen">${secondaryTypes.join("、")}</span>`;
+            } else {
+                resultDiv.innerHTML += "无明显兼夹体质";
+            }
+        }
+
+        function copyLink() {
+            const dummy = document.createElement("input");
+            const text = window.location.href;
+            document.body.appendChild(dummy);
+            dummy.setAttribute("value", text);
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            document.getElementById("copyNotice").style.display = "block";
+        }
+    </script>
+</body>
+</html>
